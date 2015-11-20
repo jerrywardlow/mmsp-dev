@@ -7,6 +7,7 @@ nodes = [
 ]
 
 Vagrant.configure(2) do |config|
+    config.hostmanager.enabled = true
     nodes.each do |node|
         config.vm.define node[:hostname] do |nodeconfig|
             nodeconfig.vm.provision :shell, path: node[:config]
