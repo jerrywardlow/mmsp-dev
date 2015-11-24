@@ -8,5 +8,12 @@ su postgres -c 'createuser -dRS vagrant'
 su postgres -c "psql -c \"CREATE USER webapp with password 'secretwebapppassword';\""
 su vagrant -c 'createdb'
 su vagrant -c 'createdb webappdb'
+# Allow incoming postgres connections
+CONF=/etc/postgresql/9.3/main/postgresql.conf
+sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" $CONF
+cat >> /etc/postgresql/9.3/main/pg_hba.conf <<EOF
+host    all    all    devweb    trust
+EOF
+sudo service postgresql restart
 
 echo 'cd /vagrant' > /home/vagrant/.bash_profile
