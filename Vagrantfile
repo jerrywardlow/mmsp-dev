@@ -14,6 +14,7 @@ Vagrant.configure(2) do |config|
             nodeconfig.vm.box = node[:box]
             nodeconfig.vm.hostname = node[:hostname]
             nodeconfig.vm.network :private_network, ip: node[:ip]
+            nodeconfig.vm.synced_folder ".", "/vagrant", disabled: true
 
             nodeconfig.vm.provider :virtualbox do |v|
                 v.name = node[:hostname]
