@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 nodes = [
-    { :hostname => "devweb", :box => "ubuntu/trusty64", :config => "web_config.sh", :ip => "172.66.166.101", :synchost => "web/", :syncguest => "/devweb"},
-    { :hostname => "devdb",  :box => "ubuntu/trusty64", :config => "db_config.sh", :ip => "172.66.166.102", :synchost => "db/", :syncguest => "/devdb"}
+    { :hostname => "devweb", :box => "ubuntu/trusty64", :config => "web/web_config.sh", :ip => "172.66.166.101", :synchost => "web/", :syncguest => "/devweb"},
+    { :hostname => "devdb",  :box => "ubuntu/trusty64", :config => "db/db_config.sh", :ip => "172.66.166.102", :synchost => "db/", :syncguest => "/devdb"}
 ]
 
 Vagrant.configure(2) do |config|
