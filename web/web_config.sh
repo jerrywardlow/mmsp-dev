@@ -7,4 +7,4 @@ apt-get -qqy install postgresql python-psycopg2
 
 apt-get -qqy install python-pip
 
-echo 'cd /vagrant' > /home/vagrant/.bash_profile
+echo 'cd '$1 > /home/vagrant/.bash_profile

@@ -16,4 +16,4 @@ host    all    all    devweb    trust
 EOF
 sudo service postgresql restart
 
-echo 'cd /vagrant' > /home/vagrant/.bash_profile
+echo 'cd '$1 > /home/vagrant/.bash_profile
