@@ -5,7 +5,7 @@ apt-get -qqy install postgresql python-psycopg2
 # Create new posgres user 'vagrant'
 su postgres -c 'createuser -dRS vagrant'
 # Create user 'webapp' with pasword
-su postgres -c "psql -c \"CREATE USER webapp with password 'secretwebapppassword';\""
+# su postgres -c "psql -c \"CREATE USER webapp with password 'secretwebapppassword';\""
 su vagrant -c 'createdb'
 su vagrant -c 'createdb webappdb'
 # Allow incoming postgres connections
