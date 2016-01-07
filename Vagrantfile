@@ -4,7 +4,8 @@
 nodes = [
     { :hostname => "devweb", :box => "ubuntu/trusty64", :config => "web/web_config.sh", :ip => "172.66.166.101", :synchost => "web/", :syncguest => "/devweb"},
     { :hostname => "devdb",  :box => "ubuntu/trusty64", :config => "db/db_config.sh",   :ip => "172.66.166.102", :synchost => "db/", :syncguest => "/devdb"},
-    { :hostname => "devfl",  :box => "ubuntu/trusty64", :config => "fl/fl_config.sh",   :ip => "172.66.166.103", :synchost => "fl/", :syncguest => "/devfl"}
+    { :hostname => "devfl",  :box => "ubuntu/trusty64", :config => "fl/fl_config.sh",   :ip => "172.66.166.103", :synchost => "fl/", :syncguest => "/devfl"},
+    { :hostname => "devpf",  :box => "cmad/pfsense",    :config => "",                  :ip => "172.66.166.1",   :synchost => "pf/", :syncguest => "/devpf"}
 ]
 
 Vagrant.configure(2) do |config|
