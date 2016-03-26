@@ -8,7 +8,7 @@ nodes = [
     config:         "web/web_config.sh",
     ip:             "101",
     synchost:       "web/",
-    syncguest:      "/devweb"
+    syncguest:      "/web"
   },
   {
     hostname:       "devdb",
@@ -16,7 +16,7 @@ nodes = [
     config:         "db/db_config.sh",
     ip:             "102",
     synchost:       "db/",
-    syncguest:      "/devdb"
+    syncguest:      "/db"
   },
   {
     hostname:       "devfl",
@@ -24,7 +24,7 @@ nodes = [
     config:         "fl/fl_config.sh",
     ip:             "103",
     synchost:       "fl/",
-    syncguest:      "/devfl"
+    syncguest:      "/fl"
   }
 ]
 
